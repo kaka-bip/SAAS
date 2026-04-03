@@ -156,5 +156,14 @@
         </div>
       </div>
     </section>
+
+
+    <footer>
+      <div class="footer-copy">
+        &copy; 2026 SIMPLI. Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
