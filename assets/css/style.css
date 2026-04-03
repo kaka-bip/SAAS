@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+
+:root {
+    --text: #111827;
+
+    --color-black: #000;
+    --color-gray: #6B7280;
+    --color-white: #fff;
+
+    --global: #F9FAFB;
+
+    --color-money: #16A34A;
+    --hover: #15803D;
+    --active: #166534;
+    --bg-low: #DCFCE7;
+    --bg-very-low: #e3faebd3;
+
+    --erro: #EF4444;
+
+    /*button*/
+    --btn-bg: #16A34A;
+    --btn-color: #FFFFFF;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+
+        a {
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--text);
+        }
+    }
+
+    .logo {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 1px;
+
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        span {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+    }
+
+}
+
+.btn-global {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    margin: 5px;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    font-weight: bold;
+    font-size: 14px;
+
+    a {
+        color: var(--btn-color);
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: var(--hover);
+    }
+
+    &:active {
+        background: var(--active);
+    }
+}
+
+
+#home {
+    background: var(--bg-very-low);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px 10%;
+    min-height: 80vh;
+
+    .content {
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            max-width: 400px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            max-width: 400px;
+        }
+
+        font-weight: 600;
+        flex: 1;
+
+        span {
+            text-transform: uppercase;
+            color: var(--btn-bg);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+
+    img {
+        max-width: 450px;
+        height: auto;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+    }
+
+    .btn-global {
+        width: fit-content;
+    }
+}
+
+#sobre {
+    padding: 50px 10%;
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 40px;
+        justify-content: center;
+
+    }
+
+    .card {
+        background-color: var(--color-white);
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        padding: 20px 10px;
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex: 1px;
+        align-items: flex-start;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 00 10px 30px var(--bg-very-low);
+        }
+    }
+
+    .icon {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-low);
+        border: 1px solid #bbf7d0;
+        box-shadow: 0 8px 20px rgba(22, 163, 74, 0.18);
+        height: 52px;
+        width: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        i {
+            color: var(--btn-bg);
+            font-size: 18px;
+        }
+    }
+}
+
+#planos {
+    padding: 50px 10%;
+
+    .titulo {
+        margin-bottom: 20px;
+
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            text-decoration: underline;
+            margin-bottom: 3px;
+            color: var(--text);
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .planos-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 40px;
+        justify-content: center;
+
+        .preco {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
+
+            .mes {
+                margin-left: 6px;
+
+                &::after {
+                    content: '/mês';
+                    color: var(--color-gray);
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .planos-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1px;
+            align-items: flex-start;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 20px 10px;
+            width: 100%;
+            max-width: 450px;
+
+            &:has(.popular) {
+                padding-top: 32px;
+            }
+
+            p {
+                color: var(--text);
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .span-recurso {
+                display: flex;
+                padding: 10px 0;
+                gap: 10px;
+                flex: 1px;
+
+                i {
+                    color: var(--btn-bg);
+                    font-size: 18px;
+                }
+            }
+
+            .btn-planos {
+                border-radius: 20px;
+                padding: 10px 20px;
+                width: 100%;
+                border: 1px solid #e5e7eb;
+                background-color: var(--btn-bg);
+                color: var(--color-white);
+                font-weight: 700;
+                font-size: 16px;
+
+                &:hover{
+                    background-color: var(--hover); 
+                }
+            }
+
+        }
+    }
+
+    .popular {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 0;
+        height: 0;
+        overflow: visible;
+        pointer-events: none;
+
+        &::after {
+            content: 'Mais popular';
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background-color: var(--btn-bg);
+            color: var(--btn-color);
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+}
