@@ -22,8 +22,7 @@
           <span class="nome-logo">Simpli</span>
         </div>
         <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="assets/pages/planos.php">Planos</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="assets/pages/dashboard.php">Painel</a></li>
         </ul>
 
@@ -164,6 +163,5 @@
       </div>
     </footer>
 
-    <script src="assets/js/index.js"></script>
   </body>
 </html>
