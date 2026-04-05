@@ -38,64 +38,21 @@
 
     <main>
       <section id="dashboard">
-        <div class="dashboard-head">
-          <h1>Olá, bem-vindo ao seu painel</h1>
-          <p>
-            Acompanhe <span>simpli</span> — resumo financeiro do mês e últimos
-            lançamentos.
-          </p>
-        </div>
+        <h1>Dashboard</h1>
 
-        <div class="dashboard-stats">
-          <article class="stat-card">
-            <div class="stat-icon">
-              <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
-            </div>
-            <span class="stat-label">Receitas (mês)</span>
-            <span class="stat-value positive">R$0,00</span>
-          </article>
-          <article class="stat-card">
-            <div class="stat-icon">
-              <i class="fa-solid fa-arrow-trend-down" aria-hidden="true"></i>
-            </div>
-            <span class="stat-label">Despesas (mês)</span>
-            <span class="stat-value negative">R$0,00</span>
-          </article>
-          <article class="stat-card">
-            <div class="stat-icon">
-              <i class="fa-solid fa-wallet" aria-hidden="true"></i>
-            </div>
-            <span class="stat-label">Saldo estimado</span>
-            <span class="stat-value positive">R$0,00</span>
-          </article>
-        </div>
+        <input type="number" id="valor" placeholder="Valor" />
 
-        <div class="dashboard-grid">
-          <div class="panel">
-            <h2>Últimos lançamentos</h2>
-            <div class="table-wrap">
-              <table class="lancamentos-table">
-                <thead>
-                  <tr>
-                    <th>Data</th>
-                    <th>Descrição</th>
-                    <th>Categoria</th>
-                    <th>Valor</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-            <button class="btn-global btn-dashboard" type="button">
-              <a href="#">Registrar novo gasto</a>
-            </button>
-          </div>
+        <select id="categoria">
+          <option>Alimentação</option>
+          <option>Transporte</option>
+          <option>Lazer</option>
+        </select>
 
-          <aside class="panel">
-            <h2>Gastos por categoria</h2>
-            <ul class="categorias-list"></ul>
-          </aside>
-        </div>
+        <button onclick="adicionarGasto()">Adicionar</button>
+
+        <h2 id="total">R$ 0.00</h2>
+
+        <div id="lista"></div>
       </section>
     </main>
 
